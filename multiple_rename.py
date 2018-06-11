@@ -7,8 +7,6 @@ def rename(file_path,extension):
 		else:
 			files = os.listdir(path)
 			print(files)
-			
-
 			i = 1
 			for file in files:
 				if extension[0]!='.':
@@ -20,17 +18,11 @@ def rename(file_path,extension):
 				print('Renaming Done :)')
 	except FileNotFoundError:
 		print('''Invalid Directory
-Make sure you enter the full path if you re running this script outside the directory
-something like the example below
+			Make sure you enter the full path if you re running this script outside the directory
+			something like the example below
 
->> python3 rename.py --file /home/user/directory_of_your_files
-
-
-		 ''')			
+			>> python3 rename.py --file /home/user/directory_of_your_files''')			
 					
-
-
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--file",help="Directory containing files to be renamed",type=str)
