@@ -5,15 +5,15 @@ def rename(file_path,extension):
 		if os.listdir(file_path)==[]:
 			print('No files found in specified direcory')
 		else:
-			files = os.listdir(path)
-			print(files)
+			files = os.listdir(file_path)
+			print("\n",files)
 			i = 1
 			for file in files:
 				if extension[0]!='.':
 					print('''Make sure you enter extension with a dot in front
 					     .jpg, .mp3, .mp4''')
 				else:
-					os.rename(os.path.join(path, file), os.path.join(path, str(i)+extension))
+					os.rename(os.path.join(file_path, file), os.path.join(file_path, str(i)+extension))
 					i = i+1
 				print('Renaming Done :)')
 	except FileNotFoundError:
